@@ -5,7 +5,7 @@ This code base is using the Julia Language and [DrWatson](https://juliadynamics.
 to make a reproducible scientific project named
 > CRM-CFP
 
-CRM-CFP concerns numerical results presented in [[Behling2021]](#1),  [[Arefidamghani2021]](#2), [[Araujo2021]](#3) and [[Behling2021a]](#4) where the Circumcentered-Reflection Method (CRM) was used to solve the Convex Feasibility Problem (CFP) of finding a common point to the nonempty intersection of closed and convex sets.
+CRM-CFP concerns numerical results presented in [[Iusem2021]](#1),  [[Arefidamghani2021]](#2), [[Araujo2021]](#3) and [[Behling2021]](#4) where the Circumcentered-Reflection Method (CRM) was used to solve the Convex Feasibility Problem (CFP) of finding a common point to the nonempty intersection of closed and convex sets (Ellipsoides).
 
 
 It is authored by Luiz-Rafael Santos in co-authorship with Guilherme Araújo, Reza Arefidamghani, Roger Behling, Yunier Bello-Cruz and Alfredo N. Iusem. 
@@ -35,7 +35,10 @@ To (locally) reproduce this project, do the following:
    Check folder `scripts` to run tests from individual papers.
 
 
-3. The codes for [[Arefidamghani2021]](#2) and [[Araujo2021]](#3) depend on the package `NLPModelsAlgencan.jl`, which is a wrapper for Julia of [ALGENCAN](https://www.ime.usp.br/~egbirgin/tango/codes.php) that uses `NLPModels` (and `JuMP`). Follow the instructions of [`NLPModelsAlgencan.jl`](https://github.com/pjssilva/NLPModelsAlgencan.jl/wiki/Compiling-HSL-Libraries-for-use-with-NLPModelsAlgencan.jl) to install it with HSL linear system solver support for faster results.
+3. The codes for [[Arefidamghani2021]](#2) and [[Araujo2021]](#3) depend on the ADMM algorithm. CRM and MAP rely on the computation of exact projections, we inform
+that the projections onto ellipsoids are computed using an alternating direction method of
+multipliers (ADMM) built suited for this end : Jia, Z., Cai, X., Han, D.: Comparison of several fast algorithms for projection onto an ellipsoid. Journal of Compu-
+tational and Applied Mathematics 319, 320–337 (2017). DOI 10.1016/j.cam.2017.01.008
 
 
 ## References
